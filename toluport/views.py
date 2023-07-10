@@ -1,19 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
-from .models import Member
+from .models import Project
 
-def members(request):
-  mymembers = Member.objects.all().values()
-  template = loader.get_template('message.html')
-  context = {
-    'mymembers': mymembers,
-  }
-  return HttpResponse(template.render(context, request))
-
-def memberstitle(request):
-  template = loader.get_template('index.html')
-  context = {
-    'mymembers': 'John',
-  }
-  return HttpResponse(template.render(context, request))
+def project_list(request):
+    projects = Project.objects.all()
+    return render(request, 'index.html', {'projects': projects})
