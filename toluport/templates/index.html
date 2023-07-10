@@ -611,15 +611,19 @@
 								<!-- Beginig of certificate view -->
 								<div class="row">
 										
-										<div class="col-md-4">
-												<div class="" style="background-color: aliceblue; border-radius: 10px;">
-														<a href="{% static '/hackaton-img/buffalo.png' %}" data-gallery="portfolioGallery" class="portfolio-lightbox">
-																<div class="work-img">
-																		<img src="{% static '/hackaton-img/buffalo.png' %}" alt="certificate" class="img-fluid">
-																</div>
-														</a>
-												</div>
-										</div>
+									{% for certificate in certificates %}
+<div class="col-md-4">
+    <div class="" style="background-color: aliceblue; border-radius: 10px;">
+        <a href="{{ certificate.Certificate.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+            <div class="work-img">
+                <img src="{{ certificate.Certificate.url }}" alt="certificate" class="img-fluid">
+            </div>
+        </a>
+    </div>
+</div>
+{% endfor %}
+
+					
 
 								</div>
 						</div>
@@ -771,6 +775,7 @@
 
 												<!-- success page-->
 												<input type="hidden" name="_next" value="https://tolujohnport.netlify.app/message.html">
+												<!-- <input type="hidden" name="_next" value="https://tolujohnport.netlify.app/message.html"> -->
 
 												<div class="row">
 														<div class="col-md-12 mb-3">

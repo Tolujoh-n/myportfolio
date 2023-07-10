@@ -10,3 +10,10 @@ class Project(models.Model):
     
     def __str__(self):
         return self.title
+
+class Certificate(models.Model):
+    course = models.CharField(max_length=255)
+    Certificate = models.ImageField(upload_to='media')
+
+    def __str__(self):
+        return self.course
