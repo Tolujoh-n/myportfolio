@@ -615,7 +615,7 @@ section {
 }
 
 .about .image {
-  background: url("../img/django-coded.png") center center no-repeat;
+  background: url("../img/django-coded.jpg") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -912,6 +912,9 @@ section {
 /*--------------------------------------------------------------
 # My Portfolio
 --------------------------------------------------------------*/
+/* .work {
+  background-color: #bdd4d4;
+} */
 .work-box {
   margin-bottom: 3rem;
   -webkit-backface-visibility: hidden;
